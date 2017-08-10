@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20170726
+Version:        0.0.20170810
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.io/
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Wed Aug 9 2017 Joe Doss <joe@solidadmin.com> - 0.0.20170810-1
+- Update to 0.0.20170810
+
 * Mon Jul 31 2017 Joe Doss <joe@solidadmin.com> - 0.0.20170726-1
 - Update to 0.0.20170726
 
