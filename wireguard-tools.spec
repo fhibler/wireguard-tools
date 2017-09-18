@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20170907
+Version:        0.0.20170918
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.io/
@@ -64,6 +64,10 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Mon Sep 18 2017 Joe Doss <joe@solidadmin.com> - 0.0.20170918-1
+- Update to 0.0.20170918
+- Drop support for RHEL 7.3, moving on instead to RHEL 7.4.
+
 * Thu Sep 7 2017 Joe Doss <joe@solidadmin.com> - 0.0.20170907-1
 - Update to 0.0.20170907
 
