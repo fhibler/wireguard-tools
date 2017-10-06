@@ -1,10 +1,10 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20171001
+Version:        0.0.20171005
 Release:        1%{?dist}
 Epoch:          1
-URL:            https://www.wireguard.io/
+URL:            https://www.wireguard.com/
 Summary:        Fast, modern, secure VPN tunnel
 License:        GPLv2
 Group:          Applications/Internet
@@ -64,6 +64,10 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Fri Oct 6 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171005-1
+- Update to 0.0.20171005
+- Update RPM spec URL to www.wireguard.com
+
 * Mon Oct 2 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171001-1
 - Update to 0.0.20171001
 
