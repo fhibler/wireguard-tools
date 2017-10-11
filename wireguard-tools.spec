@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20171005
+Version:        0.0.20171011
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
@@ -64,6 +64,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Wed Oct 11 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171011-1
+- Update to 0.0.20171011
+
 * Fri Oct 6 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171005-1
 - Update to 0.0.20171005
 - Update RPM spec URL to www.wireguard.com
