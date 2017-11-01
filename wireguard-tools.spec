@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20171017
+Version:        0.0.20171101
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
@@ -33,6 +33,10 @@ This package provides the wg binary for controling WireGuard.
 %setup -q -n WireGuard-%{version}
 
 %build
+## Start DNS Hatchet
+cd %{_builddir}/WireGuard-%{version}/contrib/examples/dns-hatchet
+./apply.sh
+## End DNS Hatchet
 cd %{_builddir}/WireGuard-%{version}/src
 make tools
 
@@ -64,6 +68,10 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Wed Nov 01 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171101-1
+- Update to 0.0.20171101
+- Add temporary DNS hatchet to wg-quick
+
 * Thu Oct 26 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171017-1
 - Update to 0.0.20171017
 
