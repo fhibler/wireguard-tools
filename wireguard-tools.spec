@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20171101
+Version:        0.0.20171111
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
@@ -68,6 +68,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Sat Nov 11 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171111-1
+- Update to 0.0.20171111
+
 * Wed Nov 01 2017 Joe Doss <joe@solidadmin.com> - 0.0.20171101-1
 - Update to 0.0.20171101
 - Add temporary DNS hatchet to wg-quick
