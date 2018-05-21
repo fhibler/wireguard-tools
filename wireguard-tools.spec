@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20180513
+Version:        0.0.20180519
 Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
@@ -14,6 +14,7 @@ Source0:        https://git.zx2c4.com/WireGuard/snapshot/WireGuard-%{version}.ta
 %{?systemd_requires}
 BuildRequires:  systemd
 BuildRequires:  pkgconfig(libmnl)
+BuildRequires:  sed
 
 Provides:       wireguard-tools = %{epoch}:%{version}-%{release}
 Requires:       wireguard-dkms
@@ -36,6 +37,7 @@ This package provides the wg binary for controling WireGuard.
 ## Start DNS Hatchet
 cd %{_builddir}/WireGuard-%{version}/contrib/examples/dns-hatchet
 ./apply.sh
+
 ## End DNS Hatchet
 cd %{_builddir}/WireGuard-%{version}/src
 make tools
@@ -68,8 +70,12 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Thu May 17 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180519-1
+- Update to 0.0.20180519
+
 * Sun May 13 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180513-1
 - Update to 0.0.20180513
+- Drop support for RHEL 7.4, moving on instead to RHEL 7.5
 
 * Fri Apr 20 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180420-1
 - Update to 0.0.20180420
