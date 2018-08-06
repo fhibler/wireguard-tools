@@ -70,7 +70,7 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
-* Sun Aug 05 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180802-1
+* Sun Aug 5 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180802-1
 - Update to 0.0.20180802
 
 * Wed Jul 18 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180718-1
