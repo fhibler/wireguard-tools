@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20180918
-Release:        2%{?dist}
+Version:        0.0.20180925
+Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
 Summary:        Fast, modern, secure VPN tunnel
@@ -70,6 +70,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Tue Sep 25 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180925-1
+- Update to 0.0.20180925
+
 * Tue Sep 18 2018 Joe Doss <joe@solidadmin.com> - 0.0.20180918-2
 - Add BuildRequires gcc to fix builds on F29 and Rawhide
 
