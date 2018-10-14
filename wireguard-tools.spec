@@ -2,7 +2,7 @@
 
 Name:           wireguard-tools
 Version:        0.0.20181007
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
 Summary:        Fast, modern, secure VPN tunnel
@@ -16,6 +16,7 @@ BuildRequires:  systemd
 BuildRequires:  pkgconfig(libmnl)
 BuildRequires:  sed
 BuildRequires:  gcc
+BuildRequires:  make
 
 Provides:       wireguard-tools = %{epoch}:%{version}-%{release}
 Requires:       wireguard-dkms
@@ -70,6 +71,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Sun Oct 14 2018 Joe Doss <joe@solidadmin.com> - 0.0.20181007-2
+- Add make as a build dependency
+
 * Sun Oct 7 2018 Joe Doss <joe@solidadmin.com> - 0.0.20181007-1
 - Update to 0.0.20181007
 
