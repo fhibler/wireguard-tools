@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           wireguard-tools
-Version:        0.0.20181007
-Release:        2%{?dist}
+Version:        0.0.20181018
+Release:        1%{?dist}
 Epoch:          1
 URL:            https://www.wireguard.com/
 Summary:        Fast, modern, secure VPN tunnel
@@ -71,6 +71,9 @@ rm -rf %{buildroot}
 %{!?_licensedir:%global license %doc}
 
 %changelog
+* Sun Oct 14 2018 Joe Doss <joe@solidadmin.com> - 0.0.20181018-1
+- Update to 0.0.20181018
+
 * Sun Oct 14 2018 Joe Doss <joe@solidadmin.com> - 0.0.20181007-2
 - Add make as a build dependency
 
